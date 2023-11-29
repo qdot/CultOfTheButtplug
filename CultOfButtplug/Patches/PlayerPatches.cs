@@ -8,14 +8,13 @@ namespace CultOfButtplug.Patches;
 public static class Patches
 {
 
-    public static ButtplugClient client = new ButtplugClient("Cult of the Buttplug");
 
     [HarmonyPrefix]
     [HarmonyPatch(typeof(Health), nameof(Health.DealDamage))]
     public static void Health_DealDamage(ref Health? __instance, ref float Damage, ref GameObject Attacker)
     {
         if (__instance is null) return;
-        foreach (var device in client.Devices) {
+        foreach (var device in Plugin.client.Devices) {
             if (device.VibrateAttributes.Count > 0) {
                 var DamageClone = Damage;
                 System.Threading.Tasks.Task.Run(async () =>
