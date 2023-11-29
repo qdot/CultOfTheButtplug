@@ -37,14 +37,6 @@ public static class Patches
     }
 
     [HarmonyPrefix]
-    [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.DoGrapple), typeof(Interaction_Grapple))]
-    public static void PlayerController_DoGraple(ref Interaction_Grapple grapple)
-    {
-        Plugin.L($"Grapple!");
-    }
-
-
-    [HarmonyPrefix]
     [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.DoIslandDash), typeof(Vector3))]
     public static void PlayerController_DoIslandDash(ref PlayerController __instance)
     {
