@@ -5,35 +5,39 @@
         <FileVersion>$(Version)</FileVersion>
     </PropertyGroup>
     <ItemGroup>
+      <PackageReference Include="Buttplug" Version="3.0.1" />
+      <PackageReference Include="Buttplug.Client.Connectors.WebsocketConnector" Version="3.0.1" />
+    </ItemGroup>
+    <ItemGroup>
       <Reference Include="Assembly-CSharp">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="FMODUnity">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\FMODUnity.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\FMODUnity.dll</HintPath>
       </Reference>
       <Reference Include="spine-unity">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\spine-unity.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\spine-unity.dll</HintPath>
       </Reference>
       <Reference Include="Unity.TextMeshPro">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\Unity.TextMeshPro.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AnimationModule">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.InputLegacyModule">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UI">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.UI.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UIModule">
-        <HintPath>I:\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+        <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\Cult Of The Lamb_Data\Managed\UnityEngine.UIModule.dll</HintPath>
       </Reference>
     </ItemGroup>
 </Project>

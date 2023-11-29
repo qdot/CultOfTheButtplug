@@ -23,11 +23,11 @@
   </ItemDefinitionGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <OutputPath>I:\Steam\steamapps\common\Cult of the Lamb\BepInEx\plugins\$(MSBuildProjectName)</OutputPath>
+    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\BepInEx\plugins\$(MSBuildProjectName)</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>I:\Steam\steamapps\common\Cult of the Lamb\BepInEx\plugins\$(MSBuildProjectName)</OutputPath>
+    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\Cult of the Lamb\BepInEx\plugins\$(MSBuildProjectName)</OutputPath>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
@@ -36,6 +36,8 @@
   
   <ItemGroup>
     <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="Buttplug" Version="3.0.1" />
+    <PackageReference Include="Buttplug.Client.Connectors.WebsocketConnector" Version="3.0.1" />
   </ItemGroup>
 
 </Project>
