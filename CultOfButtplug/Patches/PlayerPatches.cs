@@ -1,3 +1,4 @@
+using Buttplug.Client;
 using HarmonyLib;
 using UnityEngine;
 
@@ -7,11 +8,24 @@ namespace CultOfButtplug.Patches;
 public static class Patches
 {
 
+    public static ButtplugClient client = new ButtplugClient("Cult of the Buttplug");
+
     [HarmonyPrefix]
     [HarmonyPatch(typeof(Health), nameof(Health.DealDamage))]
     public static void Health_DealDamage(ref Health? __instance, ref float Damage, ref GameObject Attacker)
     {
         if (__instance is null) return;
+        foreach (var device in client.Devices) {
+            if (device.VibrateAttributes.Count > 0) {
+                var DamageClone = Damage;
+                System.Threading.Tasks.Task.Run(async () =>
+                {
+                    await device.VibrateAsync(DamageClone / 5.0);
+                    await System.Threading.Tasks.Task.Delay(100);
+                    await device.Stop();
+                });
+            }
+        }
         Plugin.L($"Deal {Damage} damage!");
     }
 

@@ -1,7 +1,6 @@
-﻿using BepInEx;
-using BepInEx.Configuration;
+using BepInEx;
 using BepInEx.Logging;
-using CultOfButtplug.Patches;
+using Buttplug.Client.Connectors.WebsocketConnector;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +21,9 @@ public partial class Plugin : BaseUnityPlugin
     {
         Log = new ManualLogSource("Cult-of-the-Buttplug");
         BepInEx.Logging.Logger.Sources.Add(Log);
+        Plugin.L($"Trying to connect client!");
+        CultOfButtplug.Patches.Patches.client.ConnectAsync(new ButtplugWebsocketConnector(new System.Uri("ws://127.0.0.1:12345")));
+        Plugin.L($"Client connect called!");
         Harmony.PatchAll();
     }
 
