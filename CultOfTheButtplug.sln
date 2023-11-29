@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32804.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{60532999-4AEA-49DE-8C01-AF85DF4213C3}") = "CultOfButtplug", "CultOfButtplug\CultOfButtplug.csproj", "{56E2ACD0-A483-4266-B8E0-E015B49F3DE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56E2ACD0-A483-4266-B8E0-E015B49F3DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E2ACD0-A483-4266-B8E0-E015B49F3DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E2ACD0-A483-4266-B8E0-E015B49F3DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E2ACD0-A483-4266-B8E0-E015B49F3DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C172809-52AF-4781-94EE-6F48C28B27A7}
+	EndGlobalSection
+EndGlobal
