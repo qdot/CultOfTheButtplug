@@ -24,7 +24,7 @@ As I am not sure anyone is actually going to use this mod, the feature list is s
 
 ## Automated Installation
 
-Installation is recommended via [Thunderstore using r2modman](https://cult-of-the-lamb.thunderstore.io/package/nonpolynomial/CultOfTheButtplug/), though the mod is also available at NexusMods.
+Installation is recommended via [Thunderstore using r2modman](https://cult-of-the-lamb.thunderstore.io/package/nonpolynomial/CultOfTheButtplug/).
 
 ## Manual Installation
 
