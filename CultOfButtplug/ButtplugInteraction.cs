@@ -16,28 +16,25 @@ namespace CultOfButtplug
 
         public override void Execute(interaction_FollowerInteraction interaction, FollowerCommands finalCommand)
         {
-            interaction.follower.Brain.MakeOld();
+            System.Threading.Tasks.Task.Run(async () =>
+            {
+                    foreach (var device in Plugin.client.Devices)
+                    {
+                        if (device.VibrateAttributes.Count > 0)
+                        {
+                            await System.Threading.Tasks.Task.Delay(500);
+                            await device.VibrateAsync(1.0);
+                            await System.Threading.Tasks.Task.Delay(500);
+                            await device.Stop();
+                        }
+                    }
+            });
             interaction.StartCoroutine(interaction.FrameDelayCallback(delegate
             {
                 interaction.eventListener.PlayFollowerVO(interaction.generalAcknowledgeVO);
                 interaction.follower.Brain.HardSwapToTask(new FollowerTask_Vomit());
-                System.Threading.Tasks.Task.Run(async () =>
-                {
-                    while (true)
-                    {
-                        foreach (var device in Plugin.client.Devices)
-                        {
-                            if (device.VibrateAttributes.Count > 0)
-                            {
-                                await System.Threading.Tasks.Task.Delay(500);
-                                await device.VibrateAsync(1.0);
-                                await System.Threading.Tasks.Task.Delay(500);
-                                await device.Stop();
-                            }
-                        }
-                    }
-                });
-            })); 
+            }));
+            interaction.Close(true, reshowMenu: false);
         }
     }
     internal class ButtplugInteraction
