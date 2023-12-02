@@ -46,11 +46,7 @@ public partial class Plugin : BaseUnityPlugin
         PluginPath = Path.GetDirectoryName(Info.Location);
         Log = new ManualLogSource("Cult-of-the-Buttplug");
         BepInEx.Logging.Logger.Sources.Add(Log);
-        Plugin.L($"Trying to connect client!");
-        Plugin.client.ConnectAsync(new ButtplugWebsocketConnector(new System.Uri("ws://127.0.0.1:12345")));
-        Plugin.L($"Client connect called!");
         Harmony.PatchAll();
-        Plugin.L($"Custom follower command added!");
 
         _allowIntifaceConnection = Config.Bind("Cult of the Buttplug", "Connect to Intiface Central", true,
             "Allow connection to Intiface Central for controlling sex toys.");

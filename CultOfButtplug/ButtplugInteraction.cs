@@ -11,7 +11,7 @@ namespace CultOfButtplug
         public override string GetTitle(Follower follower) => "Fornicate With Follower";
         public override string GetDescription(Follower follower) => "Bring follower Closer To God. Biblically. With Haptics.";
         
-        public override Sprite CommandIcon => TextureHelper.CreateSpriteFromPath(Path.Combine(Plugin.PluginPath, "Assets", "buttplug.png"));
+        public override Sprite CommandIcon => TextureHelper.CreateSpriteFromPath(Path.Combine(Plugin.PluginPath, "CultOftheButtplug", "Assets", "buttplug.png"));
         //public override string CommandStringIcon() => "<sprite name=\"icon_Poop\">";
 
         public override void Execute(interaction_FollowerInteraction interaction, FollowerCommands finalCommand)
