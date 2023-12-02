@@ -14,13 +14,22 @@ public static class Patches
     public static void Health_DealDamage(ref Health? __instance, ref float Damage, ref GameObject Attacker)
     {
         if (__instance is null) return;
-        if (__instance.isPlayer || __instance.isPlayerAlly)
+
+        // Rules:
+        // - Only vibrate on damage to player (PlayerTeam) if option is on.
+        // - Only vibrate on damage to enemy (Team2) if option is on
+        // - Otherwise, just ignore (usually damage to plants/neutral objects)
+        if (!((__instance.team == Health.Team.PlayerTeam && Plugin.VibrateOnPlayerDamage) ||
+            (__instance.team == Health.Team.Team2 && Plugin.VibrateOnAttack))
+        )
         {
-            Plugin.L($"Damage dealt to player or ally, ignore");
+            return;
         }
-/*
-        foreach (var device in Plugin.client.Devices) {
-            if (device.VibrateAttributes.Count > 0) {
+
+        foreach (var device in Plugin.client.Devices)
+        {
+            if (device.VibrateAttributes.Count > 0)
+            {
                 var DamageClone = Damage;
                 System.Threading.Tasks.Task.Run(async () =>
                 {
@@ -30,29 +39,7 @@ public static class Patches
                 });
             }
         }
-*/
+
         Plugin.L($"Deal {Damage} damage!");
-    }
-
-    [HarmonyPrefix]
-    [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.Lunge), typeof(float), typeof(float))]
-    public static void PlayerController_Lunge(ref float lungeDuration, ref float lungeSpeed)
-    {
-        Plugin.L($"Lunge {lungeDuration} {lungeSpeed}!");
-    }
-
-    [HarmonyPrefix]
-    [HarmonyPatch(typeof(PlayerController), nameof(PlayerController.DoIslandDash), typeof(Vector3))]
-    public static void PlayerController_DoIslandDash(ref PlayerController __instance)
-    {
-        Plugin.L($"Dodge DoIslandDash {__instance.DodgeSpeed}!");
-    }
-
-    [HarmonyPrefix]
-    [HarmonyPatch(typeof(PlayerFarming), nameof(PlayerFarming.DodgeRoll))]
-    public static void PlayerFarming_DodgeRoll(ref PlayerFarming __instance)
-    {
-        // This is constant
-        //Plugin.L($"Dodge DodgeRoll {__instance.playerController.DodgeSpeed}!");
     }
 }
