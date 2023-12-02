@@ -10,7 +10,7 @@
   <img src="https://raw.githubusercontent.com/qdot/CultOfTheButtplug/master/cotl_buttplug_logo.png">
 </p>
 
-Cult of the Buttplug is a simple BepInEx based mod for [Cult of the Lamb]() on PCs.
+Cult of the Buttplug is a simple BepInEx based mod for [Cult of the Lamb](https://www.cultofthelamb.com/) on PCs.
 
 _Note: While CotB may work in Proton environments, it has only been tested on Windows._
 
@@ -24,7 +24,7 @@ As I am not sure anyone is actually going to use this mod, the feature list is s
 
 ## Automated Installation
 
-Installation is recommended via Thunderstore using r2modman, though the mod is also available at NexusMods.
+Installation is recommended via [Thunderstore using r2modman](https://cult-of-the-lamb.thunderstore.io/package/nonpolynomial/CultOfTheButtplug/), though the mod is also available at NexusMods.
 
 ## Manual Installation
 
