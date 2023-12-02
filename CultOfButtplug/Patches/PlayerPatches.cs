@@ -14,6 +14,11 @@ public static class Patches
     public static void Health_DealDamage(ref Health? __instance, ref float Damage, ref GameObject Attacker)
     {
         if (__instance is null) return;
+        if (__instance.isPlayer || __instance.isPlayerAlly)
+        {
+            Plugin.L($"Damage dealt to player or ally, ignore");
+        }
+/*
         foreach (var device in Plugin.client.Devices) {
             if (device.VibrateAttributes.Count > 0) {
                 var DamageClone = Damage;
@@ -25,6 +30,7 @@ public static class Patches
                 });
             }
         }
+*/
         Plugin.L($"Deal {Damage} damage!");
     }
 
